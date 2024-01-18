@@ -2,6 +2,10 @@ import React from 'react'
 import CopyLink from '../Assets/copy-link.png'
 import './Card.css'
 import Mcap from '../Assets/mcap_png_1.png'
+import Holders from '../Assets/holders_png_1.png'
+import Bars from '../Assets/rectangle_1_copy_3.png'
+import Owner from '../Assets/owner_png_1.png'
+
 function Card(props) {
 
     let Section1 = document.getElementsByClassName('section-1')[0];
@@ -11,7 +15,7 @@ function Card(props) {
     return (
         <div>
             <div className="main-box">
-                <div className="card-container">
+                <div className="card-container" style={{backgroundColor:`${props.bgcolor}`}}>
                     <div className="section-1" style={{ backgroundImage: `url(${props.backimg})` }}>
 
                         <div className="section1-text">
@@ -30,7 +34,7 @@ function Card(props) {
                         </div>
 
                         <div style={{ backgroundColor: `${props.color1}` }} className="copy-link">
-                            <div className="copy-link-img">
+                            <div className="copy-link-img" style={{backgroundColor:`${props.bgcolor}`}}>
                                 <img src={CopyLink} alt="" />
                             </div>
                             0xbb026d........217c52326
@@ -47,7 +51,7 @@ function Card(props) {
                             <div className="section-2-21">
                                 <div className="section-2-2left">
                                     <div className='item-1'>
-                                        <div className="items-img-box">
+                                        <div className="items-img-box" style={{background : `url(${props.rect1}) no-repeat, linear-gradient(338deg, #212b21 0, #334233 100%)`,width:"48px", aspectRatio:"1/1", backgroundSize:"contain" , borderRadius:"8px",display:"flex",boxShadow: "-0.558477px 31.995127px 45.39px 5.61px rgba(25, 33, 44, 0.27)"}}>
                                             <img src={Mcap} alt="" />
                                         </div>
                                         <div className="items-text">
@@ -55,62 +59,62 @@ function Card(props) {
                                                 TREASURE BOARD
                                             </p>
                                             <p className='items-text2'>
-                                                $ 1,047,303
+                                               {props.TresureBoard}
                                             </p>
                                         </div>
                                     </div>
                                     <div className='item-1'>
-                                        <div className="items-img-box">
-                                            <img src={Mcap} alt="" />
+                                        <div className="items-img-box" style={{background : `url(${props.rect1}) no-repeat, linear-gradient(338deg, #212b21 0, #334233 100%)`,width:"48px", aspectRatio:"1/1", backgroundSize:"contain" , borderRadius:"8px",display:"flex",boxShadow: "-0.558477px 31.995127px 45.39px 5.61px rgba(25, 33, 44, 0.27)"}}>
+                                            <img src={Holders} alt="" />
                                         </div>
                                         <div className="items-text">
                                             <p className="items-text1">
-                                                TREASURE BOARD
+                                                CREW SIZE
                                             </p>
                                             <p className='items-text2'>
-                                                $ 1,047,303
+                                                ${props.CrewSize}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="section-2-2right">
                                 <div className='item-1'>
-                                        <div className="items-img-box">
-                                            <img src={Mcap} alt="" />
+                                        <div className="items-img-box" style={{background : `url(${props.rect1}) no-repeat, linear-gradient(338deg, #212b21 0, #334233 100%)`,width:"48px", aspectRatio:"1/1", backgroundSize:"contain" , borderRadius:"8px",display:"flex",boxShadow: "-0.558477px 31.995127px 45.39px 5.61px rgba(25, 33, 44, 0.27)"}}>
+                                            <img src={Bars} alt="" />
                                         </div>
                                         <div className="items-text">
                                             <p className="items-text1">
                                                 TREASURE BOARD
                                             </p>
                                             <p className='items-text2'>
-                                                $ 1,047,303
+                                                {props.SeaTradeVol}
                                             </p>
                                         </div>
                                     </div>
                                     <div className='item-1'>
-                                        <div className="items-img-box">
-                                            <img src={Mcap} alt="" />
+                                        <div className="items-img-box" style={{background : `url(${props.rect1}) no-repeat, linear-gradient(338deg, #212b21 0, #334233 100%)`,width:"48px", aspectRatio:"1/1", backgroundSize:"contain" , borderRadius:"8px",display:"flex",boxShadow: "-0.558477px 31.995127px 45.39px 5.61px rgba(25, 33, 44, 0.27)"}}>
+                                            <img src={Owner} alt="" />
                                         </div>
                                         <div className="items-text">
                                             <p className="items-text1">
                                                 TREASURE BOARD
                                             </p>
                                             <p className='items-text2'>
-                                                $ 1,047,303
+                                                {props.PersonalLoot}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="section-2-22">
-                                    <div className='bottom-box'>
+                                    <div className='bottom-box' style={{backgroundImage:`url(${props.rect2})`}}>
                                                 <div className="bottom-left">
                                                     <p className="status-text">STATUS</p>
                                                     <p className="alive-text">ALIVE</p>
                                                 </div>
                                                 <div className="bottom-right">
-                                                    <button>SWAP</button>
-                                                    <button>CHART</button>
+                                                    <button style={{backgroundColor : `${props.btncolor}`}}>SWAP</button>
+                                                    <button style={{backgroundColor : `${props.btncolor}`}}>CHART</button>
                                                 </div>
                                     </div>
 
