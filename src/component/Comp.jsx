@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect ,useState} from 'react'
 import './style.css'
 import Card from './Cards/Card.jsx'
 import Shipicon from './Assets/icon-ship.png'
@@ -53,6 +53,32 @@ import rect2_Brook from './Assets/rect2_brook.png'
 import rect2_Luffy from './Assets/rect2_luffy.png'
 
 function Comp() {
+
+  const [isClicked, setIsClicked] = useState(false);
+    
+    const handleClick = () => {
+      setIsClicked(true);
+  
+      // Reset isClicked after the transition duration
+      setTimeout(() => {
+        setIsClicked(false);
+        
+      }, 100); // Adjust the duration based on your CSS transition time
+    };
+    const [isClicked2, setIsClicked2] = useState(false);
+
+    const handleClick2 = () => {
+      setIsClicked2(true);
+  
+      // Reset isClicked after the transition duration
+      setTimeout(() => {
+        setIsClicked2(false);
+      }, 100); // Adjust the duration based on your CSS transition time
+    };
+        
+    
+
+
   var count = 1;
   function navi(e){
     // var compare = count - e;
@@ -621,12 +647,13 @@ function Comp() {
           </div>
           <div className="right-two-buttons-wrapper">
             <div className="two-button-box">
-              <div className="two-btn-b1">
+              <div  className={`animated-button ${isClicked ? 'clicked' : ''} two-btn-b1 two-btn-b11${isClicked ? '1' : ''}`} onClick={handleClick}>
                 CLAIM
                 <br />
                 YER BOOTY
               </div>
-              <div className="two-btn-b2">
+              <div  className={`animated-button2 ${isClicked2 ? 'clicked2' : ''} two-btn-b2 two-btn-b22${isClicked2 ? '2' : ''}`} id={``}
+      onClick={handleClick2}>
                 BOOSTED CLAIM
                 <br />
                 +33% TRESURE

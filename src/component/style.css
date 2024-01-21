@@ -77,6 +77,7 @@
     --br-19xl-4: 38.4px;
     --br-16xl: 35px;
 }
+
 .App{
     width: 100%;
     background-color: rgb(0, 0, 0);
@@ -427,10 +428,27 @@ circle{
     font-size: 12px;
     color: white;
 }
-.two-btn-b1:hover{
+
+.animated-button {
+    transition: transform 0.1s ease;
+  }
+  
+  .animated-button.clicked {
+    transform: scale(0.8);
+  }
+  .animated-button2 {
+    transition: transform 0.1s ease;
+    
+    
+  }
+  
+  .animated-button2.clicked2 {
+    transform: scale(0.8);
+  } 
+.two-btn-b11:hover{
     background-color: #5B5B5A;
 }
-.two-btn-b2:hover{
+.two-btn-b22:hover{
     background-color: #5B5B5A;
 }
 

@@ -252,6 +252,26 @@ align-items: center;
     height: fit-content;
     cursor: pointer;
 }
-.bottom-right button:hover{
+
+.animated-button {
+    transition: transform 0.1s ease;
+  }
+  
+  .animated-button.clicked {
+    transform: scale(0.8);
+  }
+  .animated-button2 {
+    transition: transform 0.1s ease;
+    
+    
+  }
+  
+  .animated-button2.clicked2 {
+    transform: scale(0.8);
+  }  
+  .bottom-right-hover:hover{
+    background-color: #5B5B5A !important;
+}
+.bottom-right-hover2:hover{
     background-color: #5B5B5A !important;
 }

@@ -7,7 +7,33 @@ import Bars from '../Assets/rectangle_1_copy_3.png'
 import Owner from '../Assets/owner_png_1.png'
 
 function Card(props) {
+    
+    const [isClicked, setIsClicked] = useState(false);
+    
+    const handleClick = () => {
+      setIsClicked(true);
+  
+      // Reset isClicked after the transition duration
+      setTimeout(() => {
+        setIsClicked(false);
+        
+      }, 100); // Adjust the duration based on your CSS transition time
+    };
+    const [isClicked2, setIsClicked2] = useState(false);
 
+    const handleClick2 = () => {
+      setIsClicked2(true);
+  
+      // Reset isClicked after the transition duration
+      setTimeout(() => {
+        setIsClicked2(false);
+      }, 100); // Adjust the duration based on your CSS transition time
+    };
+        
+    
+        // Cleanup event listener on component unmount
+       
+    
     let Section1 = document.getElementsByClassName('section-1')[0];
 
     const [tagcolor, settagcolor] = useState('');
@@ -177,8 +203,10 @@ function Card(props) {
                                                     <p className="alive-text">ALIVE</p>
                                                 </div>
                                                 <div className="bottom-right">
-                                                    <button style={{backgroundColor : `${props.btncolor}`}}>SWAP</button>
-                                                    <button style={{backgroundColor : `${props.btncolor}`}}>CHART</button>
+                                                    <button style={{backgroundColor : `${props.btncolor}`}} className={`animated-button ${isClicked ? 'clicked' : ''} bottom-right-hover${isClicked ? '1' : ''}`} id={``}
+      onClick={handleClick}>SWAP</button>
+                                                    <button style={{backgroundColor : `${props.btncolor}`}} className={`animated-button2 ${isClicked2 ? 'clicked2' : ''} bottom-right-hover2${isClicked2 ? '2' : ''}`} id={``}
+      onClick={handleClick2}>CHART</button>
                                                 </div>
                                     </div>
 
