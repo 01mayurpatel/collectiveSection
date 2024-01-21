@@ -603,6 +603,7 @@ column-gap: 2%;
 .App{
     flex-direction: column;
     height: 100vh;
+    overflow:hidden ;
 }
 .left-box-wrapper{
     width: 100%;
