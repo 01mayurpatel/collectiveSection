@@ -330,7 +330,7 @@ function Comp() {
         <div className='card-wrapper'>
           <div className="box-stat">
             <div className="card-box" id='box-1'>
-              <div className='card-box1'>
+              <div className='card-box1' id='box-r-1'>
                 
                 <Card
                   ids ={1} 
@@ -355,7 +355,7 @@ function Comp() {
                   PersonalLoot="3,058,351"
                 />
               </div>
-              <div className='card-box2'>
+              <div className='card-box2' id='box-r-2'>
               <Card
                   ids ={2}
                   backimg={SanjiBack}
@@ -379,7 +379,7 @@ function Comp() {
               </div>
             </div>
             <div className="card-box" id='box-2'>
-              <div className='card-box1'>
+              <div className='card-box1' id='box-r-3'>
                 <Card
                 ids ={3}
                   backimg={NamiBack}
@@ -402,7 +402,7 @@ function Comp() {
 
                 />
               </div>
-              <div className='card-box2'>
+              <div className='card-box2' id='box-r-4'>
                 <Card
                 ids ={4}
                   backimg={ChopperBack}
@@ -426,7 +426,7 @@ function Comp() {
               </div>
             </div>
             <div className="card-box" id='box-3'>
-              <div className='card-box1'>
+              <div className='card-box1' id='box-r-5'>
                 <Card
                 ids ={5}
                   backimg={ZoroBack}
@@ -448,7 +448,7 @@ function Comp() {
 
                 />
               </div>
-              <div className='card-box2'>
+              <div className='card-box2' id='box-r-6'>
                 <Card
                 ids ={6}
                   backimg={FrankyBack}
@@ -471,7 +471,7 @@ function Comp() {
               </div>
             </div>
             <div className="card-box" id='box-4'>
-              <div className='card-box1'>
+              <div className='card-box1' id='box-r-7'>
                 <Card
                 ids ={7}
                   backimg={RobinBack}
@@ -493,7 +493,7 @@ function Comp() {
 
                 />
               </div>
-              <div className='card-box2'>
+              <div className='card-box2' id='box-r-8'>
                 <Card
                 ids ={8}
                   backimg={JinbeBack}
@@ -516,8 +516,8 @@ function Comp() {
                 />
               </div>
             </div>
-            <div className="card-box" id='box-5'>
-              <div className='card-box1'>
+            <div className="card-box" id='box-5' >
+              <div className='card-box1' id='box-r-9'>
                 <Card
                 ids ={9}
                   backimg={BrookBack}
@@ -539,7 +539,7 @@ function Comp() {
 
                 />
               </div>
-              <div className='card-box2'>
+              <div className='card-box2' id='box-r-10'>
                 <Card
                 ids ={10}
                   backimg={UssopBack}
@@ -590,7 +590,24 @@ function Comp() {
               <div className="outer">
                 <div className="inner">
                   <div className="progress-inside">
-                    TIDE'S RESET
+                    <span>TIDE'S RESET</span>
+                    <div className='time-wrapper2'>
+            <div className="time-box">
+              <div className="time-box-1">
+                <div className="time-box-11">
+                  <div id="hour-value">17</div>
+                  <div>:</div>
+                  <div id="min-value">52</div>
+                </div>
+                <div className="time-box-2">
+                  <div id="hour-sym">HRS</div>
+                  <div></div>
+                  <div id="min-sym">MINS</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
                   </div>
                 </div>
               </div>

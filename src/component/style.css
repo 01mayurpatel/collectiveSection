@@ -550,7 +550,9 @@ column-gap: 2%;
     cursor: pointer;
 }
   
-
+.time-wrapper2{
+    display: none;
+}
 @media (max-width:1500px){
     .skill{
         margin-top: 10px;
@@ -593,4 +595,148 @@ column-gap: 2%;
         padding-top: 15px;
         padding-bottom: 15px;
     }  
+}
+@media (max-width:500px){
+.time-wrapper2{
+    display: block;
+}
+.App{
+    flex-direction: column;
+}
+.left-box-wrapper{
+    width: 100%;
+    height: 6% !important;
+}
+.navigator{
+    display: none;
+}
+.left-box{
+    background-color:transparent;
+    height: fit-content;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 11px;
+    margin-bottom: 5px;
+}
+.left-box-wrapper{
+    height: fit-content;
+}
+.entire-fleet{
+    transform: rotate(0deg);
+    position: static;
+    text-align: center;
+    font-size: 2.2rem;
+    width: 93%;
+}
+.ship-icon{
+    width: 32px;
+    height: auto;
+
+    /* aspect-ratio: 1/1; */
+}
+
+.middle-box-wrapper{
+    width: 100%;
+    height: 70%;
+}
+.card-box{
+    display: block;
+    position: static;
+}
+.card-box1{
+    width: 100%;
+}
+.card-box2{
+    width: 100%;
+    
+}
+.card-wrapper{
+    height: 100%;
+    width: 100%;    
+    /* aspect-ratio: 1/1; */
+}
+.section-2-1{
+    height: fit-content !important;
+}
+.skill{
+    transform: scale(0.4);
+    
+}
+.skill-wrapper{
+    position: absolute;
+    top: 20%;
+    height: 55px;
+    
+}
+.right-box{
+    position: relative;
+    margin-top: 3px;
+}
+.right-box-wrapper{
+    width: 100%;
+    height: 24%;
+    
+}
+.right-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+    padding-bottom: 3px;
+}
+#crew-share-value, #bounty-harvest-value{
+    font-size: 16px;
+}
+#crew-share-name, #bounty-harvest-name{
+    font-size: 15px;
+}
+#bounty-harvest-value img{
+    width: 20px;
+    height: auto;
+}
+.two-btn-b1{
+    width: 40%;
+}
+.two-btn-b2{
+    width: 40%;
+}
+.time-wrapper{
+    display: none;
+}
+.crew-share-wrapper{
+    margin-top: auto;
+}
+.progress-inside span{
+    font-size: 20px;
+}
+
+
+.box-stat{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#box-1{
+    position: relative;
+    /* top: 0; */
+    transition: top 0.3s ease-in-out;
+    
+}
+
+#box-5,#box-4,#box-3{
+    transition: top 0.3s ease-in-out;
+    position: relative;
+    /* top: -100%; */
+}
+#box-2{
+    position: relative;
+    /* top: 100%; */
+    transition: top 0.3s ease-in-out;
+}
+
+.box-r-1, .box-r-2,.box-r-3,.box-r-4,.box-r-5,.box-r-6,.box-r-7,.box-r-8,.box-r-9,.box-r-10{
+    position: absolute;
+}
+
+
 }

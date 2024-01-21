@@ -103,7 +103,7 @@ function Card(props) {
   }, [props.ids]);
 
     return (
-        <div>
+        <div className='card-main'>
             <div className="main-box">
                 <div className="card-container" style={{backgroundColor:`${props.bgcolor}`}}>
                     <div className="section-1" style={{ backgroundImage: `url(${props.backimg})` }}>
@@ -196,7 +196,9 @@ function Card(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="section-2-22">
+                            
+                        </div>
+                        <div className="section-2-22">
                                     <div className='bottom-box' style={{backgroundImage:`url(${props.rect2})`}}>
                                                 <div className="bottom-left">
                                                     <p className="status-text">STATUS</p>
@@ -211,7 +213,6 @@ function Card(props) {
                                     </div>
 
                             </div>
-                        </div>
                     </div>
 
                 </div>
