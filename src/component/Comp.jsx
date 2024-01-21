@@ -276,7 +276,7 @@ function Comp() {
     <div className='App'>
       <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, height=device-height"/>
 
 
         <link
@@ -300,7 +300,7 @@ function Comp() {
 
         <div className='left-box    '>
           <div className="entire-fleet">
-            ENTIRE FLEETs
+            ENTIRE FLEET
             <img className='ship-icon' src={Shipicon} />
 
           </div>
