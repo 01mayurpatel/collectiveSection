@@ -13,7 +13,11 @@ function Card(props) {
     const [tagcolor, settagcolor] = useState('');
     const [charName, setCharName] = useState('');
   const [charTag, setCharTag] = useState('');
+  function myFunction() {
+    var copyText = '0xbb02647c4ed460d08df6254d69f11217c52ad326';
+    navigator.clipboard.writeText(copyText);
   
+  }
   useEffect(() => {
       if (props.ids === 1) {
           settagcolor('#ebd091')
@@ -94,7 +98,7 @@ function Card(props) {
                         </div>
 
                         <div style={{ backgroundColor: `${props.color1}` }} className="copy-link">
-                            <div className="copy-link-img" style={{backgroundColor:`${props.bgcolor}`}}>
+                            <div className="copy-link-img" onClick={myFunction} style={{backgroundColor:`${props.bgcolor}`}}>
                                 <img src={CopyLink} alt="" />
                             </div>
                             0xbb026d........217c52326
@@ -144,7 +148,7 @@ function Card(props) {
                                         </div>
                                         <div className="items-text">
                                             <p className="items-text1">
-                                                TREASURE BOARD
+                                            SEA TRADE VOLUME
                                             </p>
                                             <p className='items-text2'>
                                                 {props.SeaTradeVol}
@@ -157,7 +161,7 @@ function Card(props) {
                                         </div>
                                         <div className="items-text">
                                             <p className="items-text1">
-                                                TREASURE BOARD
+                                            PERSONAL LOOT
                                             </p>
                                             <p className='items-text2'>
                                                 {props.PersonalLoot}

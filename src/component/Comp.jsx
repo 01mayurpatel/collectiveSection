@@ -389,7 +389,7 @@ function Comp() {
                   rect2={rect2_Chopper}
 
 
-                  doubloonValue="2"
+                  doubloonValue="$0.00000143"
                   tidalShift="0.00%"
                   sunken="0.13 ETH"
                   TresureBoard="$1,047,303"
@@ -434,7 +434,7 @@ function Comp() {
                   btncolor="#63bbd8"
                   scndcolor = "#6edbff"
 
-                  doubloonValue="3"
+                  doubloonValue="$0.00000143"
                   tidalShift="0.00%"
                   sunken="0.13 ETH"
                   TresureBoard="$1,047,303"
@@ -480,7 +480,7 @@ function Comp() {
                   rect2={rect2_Jinbe}
 
 
-                  doubloonValue="4"
+                  doubloonValue="$0.00000143"
                   tidalShift="0.00%"
                   sunken="0.13 ETH"
                   TresureBoard="$1,047,303"
@@ -525,7 +525,7 @@ function Comp() {
                   rect2={rect2_Usopp}
                   scndcolor = "#ebd091"
 
-                  doubloonValue="5"
+                  doubloonValue="$0.00000143"
                   tidalShift="0.00%"
                   sunken="0.13 ETH"
                   TresureBoard="$1,047,303"
