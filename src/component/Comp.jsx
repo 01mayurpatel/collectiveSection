@@ -55,10 +55,10 @@ import rect2_Luffy from './Assets/rect2_luffy.png'
 function Comp() {
 
   const [isClicked, setIsClicked] = useState(false);
-  function autoResizeDiv() {
-    document.getElementById('App').style.height = window.innerHeight + 'px';
-  }
-  window.onresize = autoResizeDiv;
+  // function autoResizeDiv() {
+  //   document.getElementById('App').style.height = window.innerHeight + 'px';
+  // }
+  // window.onresize = autoResizeDiv;
     const handleClick = () => {
       setIsClicked(true);
   
@@ -106,6 +106,7 @@ function Comp() {
   }
 
   useEffect(() => {
+    document.getElementById('App').style.height = window.innerHeight + 'px';
     const handleScroll = (e) => {
       // You can adjust the threshold value as needed
       const threshold = 50;
@@ -303,7 +304,7 @@ function Comp() {
 
         <div className='left-box    '>
           <div className="entire-fleet">
-            ENTIRE FLEsET
+            ENTIRE FLEET
             <img className='ship-icon' src={Shipicon} />
 
           </div>
