@@ -602,6 +602,7 @@ column-gap: 2%;
 }
 .App{
     flex-direction: column;
+    height: 100vh;
 }
 .left-box-wrapper{
     width: 100%;
