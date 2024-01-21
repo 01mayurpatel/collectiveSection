@@ -300,7 +300,7 @@ function Comp() {
 
         <div className='left-box    '>
           <div className="entire-fleet">
-            ENTIRE FLEET
+            ENTIRE FLEETs
             <img className='ship-icon' src={Shipicon} />
 
           </div>
