@@ -55,7 +55,10 @@ import rect2_Luffy from './Assets/rect2_luffy.png'
 function Comp() {
 
   const [isClicked, setIsClicked] = useState(false);
-    
+  function autoResizeDiv() {
+    document.getElementById('App').style.height = window.innerHeight + 'px';
+  }
+  window.onresize = autoResizeDiv;
     const handleClick = () => {
       setIsClicked(true);
   
@@ -273,10 +276,10 @@ function Comp() {
 
     }, []),
 
-    <div className='App'>
+    <div className='App' id='App'>
       <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, height=device-height"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
         <link
@@ -300,7 +303,7 @@ function Comp() {
 
         <div className='left-box    '>
           <div className="entire-fleet">
-            ENTIRE FLEET
+            ENTIRE FLEsET
             <img className='ship-icon' src={Shipicon} />
 
           </div>
