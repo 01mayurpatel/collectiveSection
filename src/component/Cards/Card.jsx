@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CopyLink from '../Assets/copy-link.png'
 import './Card.css'
 import Mcap from '../Assets/mcap_png_1.png'
@@ -10,7 +10,67 @@ function Card(props) {
 
     let Section1 = document.getElementsByClassName('section-1')[0];
 
+    const [tagcolor, settagcolor] = useState('');
+    const [charName, setCharName] = useState('');
+  const [charTag, setCharTag] = useState('');
+  
+  useEffect(() => {
+      if (props.ids === 1) {
+          settagcolor('#ebd091')
+          setCharName('<span>M</span>ONKEY <span>D</span>. <span>L</span>UFFY');
+    //   var jj = charName
+     
+      setCharTag('THE RUBBER BANDED RASCAL');
 
+    //   setCharName('');/
+    } else if (props.ids === 2) {
+        settagcolor('#ffc87a')
+
+        setCharName('<span>V</span>NSMOKE <span>S</span>ANJI');
+        
+      setCharTag('THE KICKIN’ COOK WITH A HEART OF GOLD');
+    } else if (props.ids === 3) {
+        settagcolor('#ffa754')
+        
+        setCharName('<span>N</span>AMI');
+        
+        setCharTag('THE SAVVY NAVIGATOR AND WEATHER');
+    } else if (props.ids === 4) {
+        settagcolor('#ff9082')
+        setCharName('<span>C</span>HOPPER');
+        
+        setCharTag('THE CUTEST DOCTOR TO EVER SAIL THE GRAND LINE');
+    } else if (props.ids === 5) {
+        settagcolor('#18ffba')
+        setCharName('<span>R</span>ORONOA <span>Z</span>ORO');
+        
+        setCharTag('THE SWORD WEILDING SLEEPWALKER');
+    } else if (props.ids === 6) {
+        settagcolor('#6edbff')
+        setCharName('<span>F</span>RANKY ');
+        
+        setCharTag('THE COLA FUELED SHIPWRIGHT WITH A ROCKIN’ DO');
+    } else if (props.ids === 7) {
+        settagcolor('#bc9dff')
+        setCharName('<span>N</span>ICO <span>R</span>OBIN');
+        
+        setCharTag('THE HISTORY BUFF WITH MANY HANDS');
+    } else if (props.ids === 8) {
+        settagcolor('#93b8ff')
+        setCharName('<span>J</span>INBE');
+        
+        setCharTag('THE FISH-MAN WITH A KNACK FOR DIPLOMACY');
+    } else if (props.ids === 9) {
+        settagcolor('#f9f9ea')
+        setCharName('<span>B</span>ROOK');
+        
+      setCharTag('THE SOULFUL SKELETON WITH AN AFRO TO DIE');
+    }else if (props.ids === 10) {
+        setCharName('<span>U</span>SOPP');
+        
+      setCharTag('THE LONG NOSED SNIPER KING');
+    }
+  }, [props.ids]);
 
     return (
         <div>
@@ -44,8 +104,8 @@ function Card(props) {
 
                     <div className="section-2">
                         <div className="section-2-1">
-                            <p className="section-2-11"><span>U</span>SOPP</p>
-                            <p className="section-2-12">THE LONG NOSED SNIPER KING</p>
+                            <p className="section-2-11" id='charName' dangerouslySetInnerHTML={{ __html: charName }} ></p>
+                            <p className="section-2-12" id='charTag' style={{color:tagcolor}}>{charTag}</p>
                         </div>
                         <div className="section-2-2">
                             <div className="section-2-21">

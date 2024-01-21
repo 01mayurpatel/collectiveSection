@@ -15,6 +15,8 @@ import FrankyBack from './Assets/franky_back.png'
 import RobinBack from './Assets/robin_back.png'
 import JinbeBack from './Assets/jinbe_back.png'
 import BrookBack from './Assets/brook_back.png'
+import LuffyBack from './Assets/luffy_back.png'
+
 
 import Ussop from './Assets/usopp.png'
 import Sanji from './Assets/sanji.png'
@@ -25,6 +27,8 @@ import Franky from './Assets/franky.png'
 import Robin from './Assets/robin.png'
 import Jinbe from './Assets/jinbe.png'
 import Brook from './Assets/brook.png'
+import Luffy from './Assets/luffy.png'
+
 
 import rect1_Usopp from './Assets/rect1_usopp.png'
 import rect1_Sanji from './Assets/rect1_sanji.png'
@@ -35,6 +39,7 @@ import rect1_Franky from './Assets/rect1_franky.png'
 import rect1_Robin from './Assets/rect1_robin.png'
 import rect1_Jinbe from './Assets/rect1_jinbe.png'
 import rect1_Brook from './Assets/rect1_brook.png'
+import rect1_Luffy from './Assets/rect1_luffy.png'
 
 import rect2_Usopp from './Assets/rect2_usopp.png'
 import rect2_Sanji from './Assets/rect2_sanji.png'
@@ -45,12 +50,28 @@ import rect2_Franky from './Assets/rect2_franky.png'
 import rect2_Robin from './Assets/rect2_robin.png'
 import rect2_Jinbe from './Assets/rect2_jinbe.png'
 import rect2_Brook from './Assets/rect2_brook.png'
+import rect2_Luffy from './Assets/rect2_luffy.png'
 
 function Comp() {
   var count = 1;
   function navi(e){
-    for(var k=1;k<e;k++){
-    
+    var compare = count - e;
+    if(compare>0){
+      
+      
+      while(compare!=0){
+        upperArrow();
+        
+        compare--;
+      }
+    }else if(compare<0){
+      
+      
+      while(compare!=0){
+        downArrow();
+        
+        compare++;
+      }
     }
     
   }
@@ -286,15 +307,17 @@ function Comp() {
               <div className='card-box1'>
                 
                 <Card
-                  backimg={UssopBack}
-                  character={Ussop}
-                  color1="#d9cb86"
-                  bgcolor="#222c22"
-                  btncolor="#b29f47"
+                  ids ={1} 
+                  backimg={LuffyBack}
+                  character={Luffy}
+                  color1="#d8bf87"
+                  bgcolor="#19212c"
+                  btncolor="#bfa874"
 
+                  scndcolor = "#ebd091"
 
-                  rect1={rect1_Usopp}
-                  rect2={rect2_Usopp}
+                  rect1={rect1_Luffy}
+                  rect2={rect2_Luffy}
 
 
                   doubloonValue="$0.00000143"
@@ -308,12 +331,13 @@ function Comp() {
               </div>
               <div className='card-box2'>
               <Card
+                  ids ={2}
                   backimg={SanjiBack}
                   character={Sanji}
                   color1="#d9b686"
                   bgcolor="#261f1b"
                   btncolor="#ddab64"
-
+                  scndcolor = "#ffc87a"
                   doubloonValue="$0.00000143"
                   rect1={rect1_Sanji}
                   rect2={rect2_Sanji}
@@ -331,11 +355,13 @@ function Comp() {
             <div className="card-box" id='box-2'>
               <div className='card-box1'>
                 <Card
+                ids ={3}
                   backimg={NamiBack}
                   character={Nami}
                   color1="#d9b086"
                   bgcolor="#222226"
                   btncolor="#dc9653" 
+                  scndcolor = "#fff"
                   
                   doubloonValue="$0.00000143"
                   rect1={rect1_Nami}
@@ -352,12 +378,13 @@ function Comp() {
               </div>
               <div className='card-box2'>
                 <Card
+                ids ={4}
                   backimg={ChopperBack}
                   character={Chopper}
                   color1="#d99186"
                   bgcolor="#2b1c1c"
                   btncolor="#db8980"
-
+                  scndcolor = "#ff9082"
                   rect1={rect1_Chopper}
                   rect2={rect2_Chopper}
 
@@ -375,12 +402,13 @@ function Comp() {
             <div className="card-box" id='box-3'>
               <div className='card-box1'>
                 <Card
+                ids ={5}
                   backimg={ZoroBack}
                   character={Zoro}
                   color1="#86d9bc"
                   bgcolor="#19192b"
                   btncolor ="#6cd2ac"
-
+                  scndcolor = "#18ffba"
                   doubloonValue="$0.00000143"
                   rect1={rect1_Zoro}
                   rect2={rect2_Zoro}
@@ -396,6 +424,7 @@ function Comp() {
               </div>
               <div className='card-box2'>
                 <Card
+                ids ={6}
                   backimg={FrankyBack}
                   character={Franky}
                   color1="#86c4d9"
@@ -403,7 +432,7 @@ function Comp() {
                   rect1={rect1_Franky}
                   rect2={rect2_Franky}
                   btncolor="#63bbd8"
-
+                  scndcolor = "#6edbff"
 
                   doubloonValue="3"
                   tidalShift="0.00%"
@@ -418,12 +447,13 @@ function Comp() {
             <div className="card-box" id='box-4'>
               <div className='card-box1'>
                 <Card
+                ids ={7}
                   backimg={RobinBack}
                   character={Robin}
                   color1="#a086d9"
                   bgcolor="#191e2b"
                   btncolor="#a57efc"
-
+                  scndcolor = "#ebd091"
                   doubloonValue="$0.00000143"
                   rect1={rect1_Robin}
                   rect2={rect2_Robin}
@@ -439,12 +469,13 @@ function Comp() {
               </div>
               <div className='card-box2'>
                 <Card
+                ids ={8}
                   backimg={JinbeBack}
                   character={Jinbe}
                   color1="#86a2d9"
                   bgcolor="#2b271e"
                   btncolor="#658ad2"
-
+                  scndcolor = "#ebd091"
                   rect1={rect1_Jinbe}
                   rect2={rect2_Jinbe}
 
@@ -462,12 +493,13 @@ function Comp() {
             <div className="card-box" id='box-5'>
               <div className='card-box1'>
                 <Card
+                ids ={9}
                   backimg={BrookBack}
                   character={Brook}
                   color1="#d9d386"
                   bgcolor="#2b2b29"
                   btncolor="#d0ca81"
-
+                  scndcolor = "#ebd091"
                   doubloonValue="$0.00000143"
                   rect1={rect1_Brook}
                   rect2={rect2_Brook}
@@ -483,6 +515,7 @@ function Comp() {
               </div>
               <div className='card-box2'>
                 <Card
+                ids ={10}
                   backimg={UssopBack}
                   character={Ussop}
                   color1="#d9cb86"
@@ -490,7 +523,7 @@ function Comp() {
                   btncolor="#b29f47"
                   rect1={rect1_Usopp}
                   rect2={rect2_Usopp}
-
+                  scndcolor = "#ebd091"
 
                   doubloonValue="5"
                   tidalShift="0.00%"

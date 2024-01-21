@@ -53,6 +53,11 @@ align-items: center;
     left: 12%;
     border-radius: 0 26px 26px 0;
 }
+.copy-link-img:hover{
+    background-color: #5B5B5A   !important;
+    cursor: pointer;
+}
+
 .section1-text{
     padding-top: 15%;
     padding-left: 3.5%;
@@ -245,4 +250,8 @@ align-items: center;
     background-color: var(--color-darkkhaki-200);
     color: white;
     height: fit-content;
+    cursor: pointer;
+}
+.bottom-right button:hover{
+    background-color: #5B5B5A !important;
 }

@@ -409,9 +409,11 @@ circle{
     line-height: 13px;
     font-size: 12px;
     color: white;
-
+    cursor: pointer;
+    
 }
 .two-btn-b2{
+    cursor: pointer;
     width: 45%;
     background-color: var(--color-mediumpurple-200);
     padding-top: 18px;
@@ -424,8 +426,12 @@ circle{
     font-size: 12px;
     color: white;
 }
-
-
+.two-btn-b1:hover{
+    background-color: #5B5B5A;
+}
+.two-btn-b2:hover{
+    background-color: #5B5B5A;
+}
 
 /* ---------------------MIDDLE SECTION */
 .middle-box-wrapper{
