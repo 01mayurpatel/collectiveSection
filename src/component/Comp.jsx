@@ -55,24 +55,24 @@ import rect2_Luffy from './Assets/rect2_luffy.png'
 function Comp() {
   var count = 1;
   function navi(e){
-    var compare = count - e;
-    if(compare>0){
+    // var compare = count - e;
+    // if(compare>0){
       
       
-      while(compare!=0){
-        upperArrow();
+    //   while(compare!=0){
+    //     upperArrow();
         
-        compare--;
-      }
-    }else if(compare<0){
+    //     compare--;
+    //   }
+    // }else if(compare<0){
       
       
-      while(compare!=0){
-        downArrow();
+    //   while(compare!=0){
+    //     downArrow();
         
-        compare++;
-      }
-    }
+    //     compare++;
+    //   }
+    // }
     
   }
 
