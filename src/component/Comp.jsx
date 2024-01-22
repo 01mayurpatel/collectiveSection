@@ -129,44 +129,44 @@ function Comp() {
       startY = e.touches[0].clientY;
     };
   
-  //   const handleTouchMove = (e) => {
-  //     const specificSection = document.getElementById('middle-box-wrapper');
+    const handleTouchMove = (e) => {
+      const specificSection = document.getElementById('middle-box-wrapper');
 
-  // // If the touchmove event occurs inside the specific section, prevent the default behavior
-  // if (specificSection && specificSection.contains(e.target)) {
-  //   e.preventDefault();
-  // }
-  //   };
+  // If the touchmove event occurs inside the specific section, prevent the default behavior
+  if (specificSection && specificSection.contains(e.target)) {
+    e.preventDefault();
+  }
+    };
   
-    // const handleTouchEnd = (e) => {
-    //   const deltaY = e.changedTouches[0].clientY - startY;
+    const handleTouchEnd = (e) => {
+      const deltaY = e.changedTouches[0].clientY - startY;
   
-    //   if (deltaY > 50) {
-    //     setTimeout(()=>{
-    //       upperArrow();
-    //     },200)
-    //   } else if (deltaY < 50) {
-    //     setTimeout(()=>{
-    //       downArrow();
+      if (deltaY > 50) {
+        setTimeout(()=>{
+          upperArrow();
+        },200)
+      } else if (deltaY < 50) {
+        setTimeout(()=>{
+          downArrow();
          
-    //     },200)
-    //   }
-    // };
+        },200)
+      }
+    };
 
     
   
     let startY = 0;
     window.addEventListener('wheel', handleScroll);
-  //   window.addEventListener('touchstart', handleTouchStart);
-  // window.addEventListener('touchmove', handleTouchMove);
-  // window.addEventListener('touchend', handleTouchEnd);
+    document.getElementById('card-wrapper').addEventListener('touchstart', handleTouchStart);
+    document.getElementById('card-wrapper').addEventListener('touchmove', handleTouchMove);
+    document.getElementById('card-wrapper').addEventListener('touchend', handleTouchEnd);
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
-    //    window.removeEventListener('touchstart', handleTouchStart);
-    // window.removeEventListener('touchmove', handleTouchMove);
-    // window.removeEventListener('touchend', handleTouchEnd);
+       document.getElementById('card-wrapper').removeEventListener('touchstart', handleTouchStart);
+       document.getElementById('card-wrapper').removeEventListener('touchmove', handleTouchMove);
+       document.getElementById('card-wrapper').removeEventListener('touchend', handleTouchEnd);
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []); 
@@ -449,7 +449,7 @@ function Comp() {
           <img src={TopArrow} alt="" />
         </div>
 
-        <div className='card-wrapper'>
+        <div className='card-wrapper' id='card-wrapper'>
           <div className="box-stat">
             <div className="card-box" id='box-1'>
               <div className='card-box1' id='box-r-1'>
