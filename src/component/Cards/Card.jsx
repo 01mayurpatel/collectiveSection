@@ -124,10 +124,10 @@ function Card(props) {
                         </div>
 
                         <div style={{ backgroundColor: `${props.color1}` }} className="copy-link">
-                            <div className="copy-link-img" onClick={myFunction} style={{backgroundColor:`${props.bgcolor}`}}>
+                            <div className="copy-link-img"  style={{backgroundColor:`${props.bgcolor}`}}>
                                 <img src={CopyLink} alt="" />
                             </div>
-                            0xbb026d........217c52326
+                            <span onClick={myFunction}>0xbb026d........217c52326</span>
                         </div>
                         <img className='char-img' src={props.character} alt="" />
                     </div>

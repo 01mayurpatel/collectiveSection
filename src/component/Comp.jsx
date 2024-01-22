@@ -142,7 +142,10 @@ function Comp() {
         setTimeout(()=>{
           upperArrow();
         },200)
+      }else if(deltaY==0){
+
       } else if (deltaY < 50) {
+        console.log(deltaY);
         setTimeout(()=>{
           downArrow();
          
@@ -853,7 +856,7 @@ function Comp() {
 
         </div>
 
-        <div className='bottom-arrow' onClick={downArrow}>
+        <div className='bottom-arrow'  onClick={downArrow}>
           <img src={BottomArrow} alt="" />
         </div>
       </div>
