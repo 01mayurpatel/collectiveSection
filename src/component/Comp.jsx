@@ -130,12 +130,9 @@ function Comp() {
     };
   
     const handleTouchMove = (e) => {
-      const specificSection = document.getElementById('middle-box-wrapper');
-
-  // If the touchmove event occurs inside the specific section, prevent the default behavior
-  if (specificSection && specificSection.contains(e.target)) {
+      
     e.preventDefault();
-  }
+  
     };
   
     const handleTouchEnd = (e) => {
@@ -240,7 +237,7 @@ function Comp() {
         setTimeout(()=>{
           
           document.getElementById('box-r-2').style.transition="top 0.3s ease-in-out";
-        },0)
+        },200)
       }else if(mobcount==9){
         document.getElementById('box-r-9').style.top="0%";
         document.getElementById('box-r-10').style.top="100%";
@@ -250,7 +247,57 @@ function Comp() {
         setTimeout(()=>{
           
           document.getElementById('box-r-1').style.transition="top 0.3s ease-in-out";
-        },0)
+        },200)
+      }else if(mobcount==8){
+        document.getElementById('box-r-8').style.top="0%";
+        document.getElementById('box-r-9').style.top="100%";
+  
+        document.getElementById('box-r-10').style.transition="none";
+        document.getElementById('box-r-10').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-10').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==7){
+        document.getElementById('box-r-7').style.top="0%";
+        document.getElementById('box-r-8').style.top="100%";
+  
+        document.getElementById('box-r-9').style.transition="none";
+        document.getElementById('box-r-9').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-9').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==6){
+        document.getElementById('box-r-6').style.top="0%";
+        document.getElementById('box-r-7').style.top="100%";
+  
+        document.getElementById('box-r-8').style.transition="none";
+        document.getElementById('box-r-8').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-8').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==5){
+        document.getElementById('box-r-5').style.top="0%";
+        document.getElementById('box-r-6').style.top="100%";
+  
+        document.getElementById('box-r-7').style.transition="none";
+        document.getElementById('box-r-7').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==4){
+        document.getElementById('box-r-4').style.top="0%";
+        document.getElementById('box-r-5').style.top="100%";
+  
+        document.getElementById('box-r-6').style.transition="none";
+        document.getElementById('box-r-6').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
+        },200)
       }else {
       
         document.getElementById(`box-r-${mobcount}`).style.top="0%";
