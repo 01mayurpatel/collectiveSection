@@ -327,7 +327,7 @@ function Comp() {
 
 
       <div className="middle-box-wrapper">
-        <div className='upper-arrow' style={{display:"none"}} onClick={upperArrow} >
+        <div className='upper-arrow'  onClick={upperArrow} >
           <img src={TopArrow} alt="" />
         </div>
 

@@ -255,6 +255,7 @@ align-items: center;
 
 .animated-button {
     transition: transform 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .animated-button.clicked {
@@ -262,6 +263,7 @@ align-items: center;
   }
   .animated-button2 {
     transition: transform 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
     
     
   }

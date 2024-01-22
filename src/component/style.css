@@ -431,6 +431,7 @@ circle{
 
 .animated-button {
     transition: transform 0.1s ease;
+    -webkit-tap-highlight-color: transparent;   
   }
   
   .animated-button.clicked {
@@ -438,7 +439,7 @@ circle{
   }
   .animated-button2 {
     transition: transform 0.1s ease;
-    
+    -webkit-tap-highlight-color: transparent;
     
   }
   
