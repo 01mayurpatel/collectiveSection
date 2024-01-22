@@ -136,9 +136,9 @@ function Comp() {
     const handleTouchEnd = (e) => {
       const deltaY = e.changedTouches[0].clientY - startY;
   
-      if (deltaY > 50) {
+      if (deltaY > 30) {
         upperArrow();
-      } else if (deltaY < -50) {
+      } else if (deltaY < -30) {
         downArrow();
       }
     };
