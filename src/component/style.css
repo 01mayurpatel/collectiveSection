@@ -720,32 +720,36 @@ column-gap: 2%;
     overflow: hidden;
 }
 #box-1{
-    position: relative;
+    position: static;
     /* top: 0; */
     transition: top 0.3s ease-in-out;
     
 }
-
+.card-wrapper{
+    position: relative;
+}
 #box-5,#box-4,#box-3{
     transition: top 0.3s ease-in-out;
-    position: relative;
-    /* top: -100%; */
+    /* top: 0%; */
+    position: static;
 }
 #box-2{
-    position: relative;
+    position: static;
     /* top: 100%; */
     transition: top 0.3s ease-in-out;
 }
 
 #box-r-1, #box-r-2,#box-r-3,#box-r-4,#box-r-5,#box-r-6,#box-r-7,#box-r-8,#box-r-9,#box-r-10{
     position: absolute;
+    transition: top 0.3s ease-in-out;
     height: 100%;
+    top: -100%;
 }
-#box-r-1{
-   
+#box-r-1 {
+   top: 0%;
 }
 #box-r-2{
-    
+    top: 100%;
 }
 .middle-box-wrapper{
     position: relative;

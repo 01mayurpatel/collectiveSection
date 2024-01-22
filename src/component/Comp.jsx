@@ -83,6 +83,7 @@ function Comp() {
 
 
   var count = 1;
+  var mobcount =1;
   function navi(e){
     // var compare = count - e;
     // if(compare>0){
@@ -126,6 +127,7 @@ function Comp() {
     };
 
     window.addEventListener('wheel', handleScroll);
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -141,51 +143,91 @@ function Comp() {
 
       document.getElementsByClassName('upper-arrow')[0].style.transform="scale(1)";
     },250)
-    if(count==1){
-      count=5;
-    }else{
-      count--;
-    }
-    for(var i=1;i<=5;i++){
-      if(i==count){
-        document.getElementById(`navigator-${i}`).style.backgroundColor = "white";
+    if(window.innerWidth>500){
+      if(count==1){
+        count=5;
       }else{
-      document.getElementById(`navigator-${i}`).style.backgroundColor = "transparent";
-
+        count--;
       }
-    }
-    if(count==5){
-      document.getElementById('box-5').style.top="0%";
-      document.getElementById('box-1').style.top="100%";
-
-      document.getElementById('box-2').style.transition="none";
-      document.getElementById('box-2').style.top="-100%";
-      setTimeout(()=>{
-        
-        document.getElementById('box-2').style.transition="top 0.3s ease-in-out";
-      },0)
-    }
-    else if(count==4){
-      document.getElementById('box-4').style.top="0%";
-      document.getElementById('box-5').style.top="100%";
-
-      document.getElementById('box-1').style.transition="none";
-      document.getElementById('box-1').style.top="-100%";
-      setTimeout(()=>{
-        
-        document.getElementById('box-1').style.transition="top 0.3s ease-in-out";
-      },0)
-    }else {
-    
-      document.getElementById(`box-${count}`).style.top="0%";
-      document.getElementById(`box-${count+1}`).style.top="100%";
-
-      document.getElementById(`box-${count+2}`).style.transition="none";
-      document.getElementById(`box-${count+2}`).style.top="-100%";
-      setTimeout(()=>{
-        
-        document.getElementById(`box-${count+2}`).style.transition="top 0.3s ease-in-out";
-      },0)
+      for(var i=1;i<=5;i++){
+        if(i==count){
+          document.getElementById(`navigator-${i}`).style.backgroundColor = "white";
+        }else{
+        document.getElementById(`navigator-${i}`).style.backgroundColor = "transparent";
+  
+        }
+      }
+      if(count==5){
+        document.getElementById('box-5').style.top="0%";
+        document.getElementById('box-1').style.top="100%";
+  
+        document.getElementById('box-2').style.transition="none";
+        document.getElementById('box-2').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-2').style.transition="top 0.3s ease-in-out";
+        },0)
+      }
+      else if(count==4){
+        document.getElementById('box-4').style.top="0%";
+        document.getElementById('box-5').style.top="100%";
+  
+        document.getElementById('box-1').style.transition="none";
+        document.getElementById('box-1').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-1').style.transition="top 0.3s ease-in-out";
+        },0)
+      }else {
+      
+        document.getElementById(`box-${count}`).style.top="0%";
+        document.getElementById(`box-${count+1}`).style.top="100%";
+  
+        document.getElementById(`box-${count+2}`).style.transition="none";
+        document.getElementById(`box-${count+2}`).style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-${count+2}`).style.transition="top 0.3s ease-in-out";
+        },0)
+      }
+    }else{
+      if(mobcount==1){
+        mobcount=10;
+      }else{
+        mobcount--;
+      }
+      if(mobcount==10){
+        document.getElementById('box-r-10').style.top="0%";
+        document.getElementById('box-r-1').style.top="100%";
+  
+        document.getElementById('box-r-2').style.transition="none";
+        document.getElementById('box-r-2').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-2').style.transition="top 0.3s ease-in-out";
+        },0)
+      }else if(mobcount==9){
+        document.getElementById('box-r-9').style.top="0%";
+        document.getElementById('box-r-10').style.top="100%";
+  
+        document.getElementById('box-r-1').style.transition="none";
+        document.getElementById('box-r-1').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-1').style.transition="top 0.3s ease-in-out";
+        },0)
+      }else {
+      
+        document.getElementById(`box-r-${mobcount}`).style.top="0%";
+        document.getElementById(`box-r-${mobcount+1}`).style.top="100%";
+  
+        document.getElementById(`box-r-${mobcount+2}`).style.transition="none";
+        document.getElementById(`box-r-${mobcount+2}`).style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-r-${mobcount+2}`).style.transition="top 0.3s ease-in-out";
+        },0)
+      }
     }
    
   }
@@ -195,54 +237,95 @@ function Comp() {
 
       document.getElementsByClassName('bottom-arrow')[0].style.transform="scale(1)";
     },250)
-    if(count==5){
-      count=1;
-    }else{
-      count++;
-    }
-    for(var i=1;i<=5;i++){
-      if(i==count){
-        document.getElementById(`navigator-${i}`).style.backgroundColor = "white";
+    if(window.innerWidth>500){
+      if(count==5){
+        count=1;
       }else{
-      document.getElementById(`navigator-${i}`).style.backgroundColor = "transparent";
-
+        count++;
       }
-    }
-    if(count==1){
-      document.getElementById('box-5').style.top="-100%";
-      document.getElementById('box-1').style.top="0%";
-
-      document.getElementById('box-2').style.transition="none";
-      document.getElementById('box-2').style.top="100%";
-      setTimeout(()=>{
-        
-        document.getElementById('box-2').style.transition="top 0.3s ease-in-out";
-      },0)
-    }else if(count==5){
-      document.getElementById('box-4').style.top="-100%";
-      document.getElementById('box-5').style.top="0%";
-
-      document.getElementById('box-1').style.transition="none";
-      document.getElementById('box-1').style.top="100%";
-      setTimeout(()=>{
-        
-        document.getElementById('box-1').style.transition="top 0.3s ease-in-out";
-      },0)
-
-
-    } 
-    else{
-      document.getElementById(`box-${count-1}`).style.top="-100%";
-      document.getElementById(`box-${count}`).style.top="0%";
-
-      document.getElementById(`box-${count+1}`).style.transition="none";
-      document.getElementById(`box-${count+1}`).style.top="100%";
-      setTimeout(()=>{
-        
-        document.getElementById(`box-${count+1}`).style.transition="top 0.3s ease-in-out";
-      },0)
-
-
+      for(var i=1;i<=5;i++){
+        if(i==count){
+          document.getElementById(`navigator-${i}`).style.backgroundColor = "white";
+        }else{
+        document.getElementById(`navigator-${i}`).style.backgroundColor = "transparent";
+  
+        }
+      }
+      if(count==1){
+        document.getElementById('box-5').style.top="-100%";
+        document.getElementById('box-1').style.top="0%";
+  
+        document.getElementById('box-2').style.transition="none";
+        document.getElementById('box-2').style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-2').style.transition="top 0.3s ease-in-out";
+        },0)
+      }else if(count==5){
+        document.getElementById('box-4').style.top="-100%";
+        document.getElementById('box-5').style.top="0%";
+  
+        document.getElementById('box-1').style.transition="none";
+        document.getElementById('box-1').style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-1').style.transition="top 0.3s ease-in-out";
+        },0)
+  
+  
+      } 
+      else{
+        document.getElementById(`box-${count-1}`).style.top="-100%";
+        document.getElementById(`box-${count}`).style.top="0%";
+  
+        document.getElementById(`box-${count+1}`).style.transition="none";
+        document.getElementById(`box-${count+1}`).style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-${count+1}`).style.transition="top 0.3s ease-in-out";
+        },0)
+  
+  
+      }
+    }else{
+      if(mobcount==10){
+        mobcount=1;
+      }else{
+        mobcount++;
+      }
+      if(mobcount==1){
+        document.getElementById(`box-r-10`).style.top="-100%";
+        document.getElementById(`box-r-1`).style.top="0%";
+  
+        document.getElementById(`box-r-2`).style.transition="none";
+        document.getElementById(`box-r-2`).style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-r-2`).style.transition="top 0.3s ease-in-out";
+        },0)
+  
+      }else if(mobcount==10){
+        document.getElementById(`box-r-9`).style.top="-100%";
+        document.getElementById(`box-r-10`).style.top="0%";
+  
+        document.getElementById(`box-r-1`).style.transition="none";
+        document.getElementById(`box-r-1`).style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-r-1`).style.transition="top 0.3s ease-in-out";
+        },0)
+  
+      }else{
+        document.getElementById(`box-r-${mobcount-1}`).style.top="-100%";
+        document.getElementById(`box-r-${mobcount}`).style.top="0%";
+  
+        document.getElementById(`box-r-${mobcount+1}`).style.transition="none";
+        document.getElementById(`box-r-${mobcount+1}`).style.top="100%";
+        setTimeout(()=>{
+          
+          document.getElementById(`box-r-${mobcount+1}`).style.transition="top 0.3s ease-in-out";
+        },0)
+      }
     }
     
    }
