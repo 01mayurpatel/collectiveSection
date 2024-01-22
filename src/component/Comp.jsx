@@ -55,10 +55,10 @@ import rect2_Luffy from './Assets/rect2_luffy.png'
 function Comp() {
 
   const [isClicked, setIsClicked] = useState(false);
-  function autoResizeDiv() {
-    document.getElementById('App').style.height = window.innerHeight + 'px';
-  }
-  window.onresize = autoResizeDiv;
+  // function autoResizeDiv() {
+  //   document.getElementById('App').style.height = window.innerHeight + 'px';
+  // }
+  // window.onresize = autoResizeDiv;
     const handleClick = () => {
       setIsClicked(true);
   
