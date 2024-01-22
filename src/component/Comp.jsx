@@ -130,23 +130,30 @@ function Comp() {
     };
   
     const handleTouchMove = (e) => {
-      e.preventDefault();
+      const specificSection = document.getElementById('middle-box-wrapper');
+
+  // If the touchmove event occurs inside the specific section, prevent the default behavior
+  if (specificSection && specificSection.contains(e.target)) {
+    e.preventDefault();
+  }
     };
   
     const handleTouchEnd = (e) => {
       const deltaY = e.changedTouches[0].clientY - startY;
   
-      if (deltaY > 50) {
+      if (deltaY > 200) {
         setTimeout(()=>{
           upperArrow();
         },200)
-      } else if (deltaY < -50) {
+      } else if (deltaY < -200) {
         setTimeout(()=>{
           downArrow();
          
         },200)
       }
     };
+
+    
   
     let startY = 0;
     window.addEventListener('wheel', handleScroll);
@@ -437,7 +444,7 @@ function Comp() {
 
 
 
-      <div className="middle-box-wrapper">
+      <div className="middle-box-wrapper" id='middle-box-wrapper'>
         <div className='upper-arrow'  onClick={upperArrow} >
           <img src={TopArrow} alt="" />
         </div>
