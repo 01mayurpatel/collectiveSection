@@ -55,10 +55,10 @@ import rect2_Luffy from './Assets/rect2_luffy.png'
 function Comp() {
 
   const [isClicked, setIsClicked] = useState(false);
-  // function autoResizeDiv() {
-  //   document.getElementById('App').style.height = window.innerHeight + 'px';
-  // }
-  // window.onresize = autoResizeDiv;
+  function autoResizeDiv() {
+    document.getElementById('App').style.height = window.innerHeight + 'px';
+  }
+  window.onresize = autoResizeDiv;
     const handleClick = () => {
       setIsClicked(true);
   
@@ -327,7 +327,7 @@ function Comp() {
 
 
       <div className="middle-box-wrapper">
-        <div className='upper-arrow' onClick={upperArrow} >
+        <div className='upper-arrow' style={{display:"none"}} onClick={upperArrow} >
           <img src={TopArrow} alt="" />
         </div>
 
