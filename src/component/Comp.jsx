@@ -137,9 +137,9 @@ function Comp() {
       const deltaY = e.changedTouches[0].clientY - startY;
   
       if (deltaY > 50) {
-        downArrow();
-      } else if (deltaY < -50) {
         upperArrow();
+      } else if (deltaY < -50) {
+        downArrow();
       }
     };
   
