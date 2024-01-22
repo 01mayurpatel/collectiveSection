@@ -110,11 +110,11 @@ function Comp() {
     document.getElementById('App').style.height = window.innerHeight + 'px';
     const handleScroll = (e) => {
       // You can adjust the threshold value as needed
-      const threshold = 50;
+      const threshold = 100;
 
       if (e.deltaY > threshold) {
         downArrow();
-      } else if (e.deltaY < -threshold) {
+      } else if (e.deltaY < -100) {
         upperArrow();
       }
     };
