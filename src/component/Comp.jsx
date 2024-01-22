@@ -296,7 +296,7 @@ function Comp() {
         document.getElementById('box-r-6').style.top="-100%";
         setTimeout(()=>{
           
-          document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
+          document.getElementById('box-r-6').style.transition="top 0.3s ease-in-out";
         },100)
       }else if(mobcount==3){
         document.getElementById('box-r-3').style.top="0%";
@@ -316,7 +316,7 @@ function Comp() {
         document.getElementById('box-r-4').style.top="-100%";
         setTimeout(()=>{
           
-          document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
+          document.getElementById('box-r-4').style.transition="top 0.3s ease-in-out";
         },100)
       }else if(mobcount==1){
         document.getElementById('box-r-1').style.top="0%";
