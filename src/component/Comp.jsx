@@ -129,44 +129,44 @@ function Comp() {
       startY = e.touches[0].clientY;
     };
   
-    const handleTouchMove = (e) => {
-      const specificSection = document.getElementById('middle-box-wrapper');
+  //   const handleTouchMove = (e) => {
+  //     const specificSection = document.getElementById('middle-box-wrapper');
 
-  // If the touchmove event occurs inside the specific section, prevent the default behavior
-  if (specificSection && specificSection.contains(e.target)) {
-    e.preventDefault();
-  }
-    };
+  // // If the touchmove event occurs inside the specific section, prevent the default behavior
+  // if (specificSection && specificSection.contains(e.target)) {
+  //   e.preventDefault();
+  // }
+  //   };
   
-    const handleTouchEnd = (e) => {
-      const deltaY = e.changedTouches[0].clientY - startY;
+    // const handleTouchEnd = (e) => {
+    //   const deltaY = e.changedTouches[0].clientY - startY;
   
-      if (deltaY > 50) {
-        setTimeout(()=>{
-          upperArrow();
-        },200)
-      } else if (deltaY < 50) {
-        setTimeout(()=>{
-          downArrow();
+    //   if (deltaY > 50) {
+    //     setTimeout(()=>{
+    //       upperArrow();
+    //     },200)
+    //   } else if (deltaY < 50) {
+    //     setTimeout(()=>{
+    //       downArrow();
          
-        },200)
-      }
-    };
+    //     },200)
+    //   }
+    // };
 
     
   
     let startY = 0;
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchstart', handleTouchStart);
-  window.addEventListener('touchmove', handleTouchMove);
-  window.addEventListener('touchend', handleTouchEnd);
+  //   window.addEventListener('touchstart', handleTouchStart);
+  // window.addEventListener('touchmove', handleTouchMove);
+  // window.addEventListener('touchend', handleTouchEnd);
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
-       window.removeEventListener('touchstart', handleTouchStart);
-    window.removeEventListener('touchmove', handleTouchMove);
-    window.removeEventListener('touchend', handleTouchEnd);
+    //    window.removeEventListener('touchstart', handleTouchStart);
+    // window.removeEventListener('touchmove', handleTouchMove);
+    // window.removeEventListener('touchend', handleTouchEnd);
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []); 
@@ -422,7 +422,7 @@ function Comp() {
 
         <div className='left-box    '>
           <div className="entire-fleet">
-            ENTIRE FLEETs
+            ENTIRE FLEET
             <img className='ship-icon' src={Shipicon} />
 
           </div>
