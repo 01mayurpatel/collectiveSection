@@ -141,7 +141,10 @@ function Comp() {
           upperArrow();
         },200)
       } else if (deltaY < -50) {
-        downArrow();
+        setTimeout(()=>{
+          downArrow();
+         
+        },200)
       }
     };
   
