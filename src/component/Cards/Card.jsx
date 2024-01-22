@@ -198,13 +198,13 @@ function Card(props) {
                             </div>
                             
                         </div>
-                        <div className="section-2-22">
+                        <div className="section-2-22" style={{marginBottom:"23px"}}>
                                     <div className='bottom-box' style={{backgroundImage:`url(${props.rect2})`}}>
                                                 <div className="bottom-left">
                                                     <p className="status-text">STATUS</p>
                                                     <p className="alive-text">ALIVE</p>
                                                 </div>
-                                                <div className="bottom-right">
+                                                <div className="bottom-right" >
                                                     <button style={{backgroundColor : `${props.btncolor}`}} className={`animated-button ${isClicked ? 'clicked' : ''} bottom-right-hover${isClicked ? '1' : ''}`} id={``}
       onClick={handleClick}>SWAP</button>
                                                     <button style={{backgroundColor : `${props.btncolor}`}} className={`animated-button2 ${isClicked2 ? 'clicked2' : ''} bottom-right-hover2${isClicked2 ? '2' : ''}`} id={``}
