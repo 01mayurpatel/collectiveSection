@@ -608,7 +608,7 @@ column-gap: 2%;
 }
 .left-box-wrapper{
     width: 100%;
-    height: 6% !important;
+    height: 7% !important;
 }
 .navigator{
     display: none;
@@ -640,7 +640,7 @@ column-gap: 2%;
 
 .middle-box-wrapper{
     width: 100%;
-    height: 77%;
+    height: 76%;
 }
 .card-box{
     display: block;

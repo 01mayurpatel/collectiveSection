@@ -125,13 +125,36 @@ function Comp() {
         downArrow();
       }
     };
-
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY;
+    };
+  
+    const handleTouchMove = (e) => {
+      e.preventDefault();
+    };
+  
+    const handleTouchEnd = (e) => {
+      const deltaY = e.changedTouches[0].clientY - startY;
+  
+      if (deltaY > 50) {
+        downArrow();
+      } else if (deltaY < -50) {
+        upperArrow();
+      }
+    };
+  
+    let startY = 0;
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('touchstart', handleTouchStart);
+  window.addEventListener('touchmove', handleTouchMove);
+  window.addEventListener('touchend', handleTouchEnd);
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
+       window.removeEventListener('touchstart', handleTouchStart);
+    window.removeEventListener('touchmove', handleTouchMove);
+    window.removeEventListener('touchend', handleTouchEnd);
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []); 
