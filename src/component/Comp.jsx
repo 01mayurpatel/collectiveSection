@@ -298,6 +298,36 @@ function Comp() {
           
           document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
         },200)
+      }else if(mobcount==3){
+        document.getElementById('box-r-3').style.top="0%";
+        document.getElementById('box-r-4').style.top="100%";
+  
+        document.getElementById('box-r-5').style.transition="none";
+        document.getElementById('box-r-5').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-5').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==2){
+        document.getElementById('box-r-2').style.top="0%";
+        document.getElementById('box-r-3').style.top="100%";
+  
+        document.getElementById('box-r-4').style.transition="none";
+        document.getElementById('box-r-4').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-7').style.transition="top 0.3s ease-in-out";
+        },200)
+      }else if(mobcount==1){
+        document.getElementById('box-r-1').style.top="0%";
+        document.getElementById('box-r-2').style.top="100%";
+  
+        document.getElementById('box-r-3').style.transition="none";
+        document.getElementById('box-r-3').style.top="-100%";
+        setTimeout(()=>{
+          
+          document.getElementById('box-r-3').style.transition="top 0.3s ease-in-out";
+        },200)
       }else {
       
         document.getElementById(`box-r-${mobcount}`).style.top="0%";
